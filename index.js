@@ -9,7 +9,17 @@
 	AFRAME.registerComponent('inventory-3d', {
 		schema: {type: 'string'},
 
+		loadBasicMaterial: function(materials,index,config){
+			debugger;
+			var texloader = new THREE.TextureLoader();
+			texloader.load(config.image, function(tex) {
+				materials[index] = new THREE.MeshBasicMaterial({map: tex});
+			});
+		},
+
 		configureObject: function(obj,configuration){
+			var _this = this;
+			var texloader = new THREE.TextureLoader();
 			configuration.materials.forEach(function(mat,i){
 				if(mat.index==undefined){
 					for(var j = 0 ; j < obj.children[0].geometry.faces.length; j++ ){
@@ -20,7 +30,12 @@
 						}
 					}
 				}
-				obj.children[0].material.materials[mat.index] = new THREE.MeshBasicMaterial( { color: mat.color } );
+				if(mat.type=="color"){
+					obj.children[0].material.materials[mat.index] = new THREE.MeshBasicMaterial( { color: mat.color } );
+				}
+				if(mat.type=="basic"){
+					_this.loadBasicMaterial(obj.children[0].material.materials,mat.index,mat);
+				}
 			});
 		},
 
