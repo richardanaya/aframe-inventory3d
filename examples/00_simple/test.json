@@ -1,7 +1,7 @@
 {
   "scenes": [
     {
-      "url":"https://cdn.rawgit.com/richardanaya/aframe-inventory3d/master/examples/00_simple/untitled.dae",
+      "url":"untitled.dae",
       "configuration":{
         "objects":[
           {
@@ -9,9 +9,11 @@
             "materials": [
               {
                 "id":"Material-material",
+                "type":"color",
                 "color":"purple"
               },{
                 "id":"Material_001-material",
+                "type":"color",
                 "color":"yellow"
               }
             ]
