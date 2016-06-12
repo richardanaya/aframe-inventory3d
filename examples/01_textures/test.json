@@ -10,11 +10,11 @@
               {
                 "id":"Material-material",
                 "type":"basic",
-                "image":"https://rawgit.com/richardanaya/aframe-inventory3d/test/examples/01_textures/grid.jpg"
+                "image":"https://rawgit.com/richardanaya/aframe-inventory3d/test/examples/01_textures/smiley.jpg"
               },{
                 "id":"Material_001-material",
                 "type":"color",
-                "color":"yellow"
+                "color":"red"
               }
             ]
           }
