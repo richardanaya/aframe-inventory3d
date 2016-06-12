@@ -1,7 +1,7 @@
 {
   "scenes": [
     {
-      "url":"untitled.dae",
+      "url":"https://cdn.rawgit.com/richardanaya/aframe-inventory3d/master/examples/00_simple/untitled.dae",
       "configuration":{
         "objects":[
           {
