@@ -1,0 +1,23 @@
+{
+  "scenes": [
+    {
+      "url":"untitled.dae",
+      "configuration":{
+        "objects":[
+          {
+            "id":"Cube",
+            "materials": [
+              {
+                "id":"Material-material",
+                "color":"green"
+              },{
+                "id":"Material_001-material",
+                "color":"yellow"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "aframe-inventory3d",
+  "version": "0.0.1",
+  "description": "A component for loading inventory objects for VR",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardanaya/aframe-inventory3d.git"
+  },
+  "keywords": [
+    "aframe",
+    "inventory",
+    "3d"
+  ],
+  "author": "Richard Anaya <richard.anaya@gmail.com> (http://www.richardanaya.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richardanaya/aframe-inventory3d/issues"
+  },
+  "homepage": "https://github.com/richardanaya/aframe-inventory3d#readme",
+  "dependencies": {
+    "aframe": "latest"
+  }
+}
