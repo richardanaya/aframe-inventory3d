@@ -155,7 +155,6 @@
 		},
 
 		getURLRelativeToJson:function(u){
-			debugger;
 			var url = parseUri(u)
 			var baseUri = parseUri(this.baseUrl);
 			var finalURL = u;
