@@ -1,7 +1,8 @@
 {
+  "script": "./stoplight.js",
   "scenes": [
     {
-      "url":"untitled.dae",
+      "url":"./stoplight.dae",
       "configuration":{
         "objects":[
           {
@@ -10,11 +11,11 @@
               {
                 "id":"Material-material",
                 "type":"color",
-                "color":"purple"
+                "color":"gray"
               },{
                 "id":"Material_001-material",
                 "type":"color",
-                "color":"yellow"
+                "color":"red"
               }
             ]
           }
