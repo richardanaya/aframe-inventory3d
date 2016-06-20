@@ -2,7 +2,7 @@
 // repo    : https://github.com/richardanaya/aframe-inventory3d
 // license : MIT
 
-(function (window, module, AFRAME) {
+(function (window, module, AFRAME, reducerthread) {
 
 	// parseUri 1.2.2
 	// (c) Steven Levithan <stevenlevithan.com>
@@ -196,5 +196,6 @@
 })(
 	typeof window !== "undefined" ? window : {},
 	typeof module !== "undefined" ? module : {},
-	typeof require !== "undefined" ? AFRAME || window.AFRAME || require("aframe") : (AFRAME || window.AFRAME)
+	typeof require !== "undefined" ? (AFRAME || window.AFRAME) || require("aframe") : (AFRAME || window.AFRAME),
+	typeof require !== "undefined" ? require("reducerthread") : reducerthread
 );

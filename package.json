@@ -1,6 +1,6 @@
 {
   "name": "aframe-inventory3d",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A component for loading inventory objects for VR",
   "main": "index.js",
   "scripts": {
@@ -24,8 +24,10 @@
   "dependencies": {
     "aframe": "latest",
     "aframe-canvas": "0.0.4",
+    "esprima": "^2.7.2",
     "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "react-dom": "^15.1.0",
+    "reducerthread": "0.0.6"
   },
   "devDependencies": {
     "concurrently": "^2.1.0",
