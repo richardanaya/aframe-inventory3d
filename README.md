@@ -119,3 +119,8 @@ if(state.accumulativeTime>1000) {
 Scripts of inventory3D objects execute once per frame in a javascript virtual machine in your browser. They are isolated from the outside world except through a few means. A single state object that is passed into and out. And various helper variables and functions for modifying the inventory3d object's state.
 
 If the script takes too long to execute, or generates an exception of any kind, it is removed from the virtual machine and prevented from execution. Additionally, there may be other restrictions on requests which may harm experience due to rapid calling or really should require the users permission. 
+
+#Global Variables & Functions
+* state - a javascript object for persisting state and communicating to outside world.
+* deltaTime - the number of milliseconds since this script was last run
+* vrChangeMaterialColor(objectId,materialId,color) - change the color of a material on an object
