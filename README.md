@@ -90,29 +90,27 @@ function changeStopLightColor(color){
 //if we have no state, we must be starting up
 if(state==null){
     state = {
-        color:"green",
+        currentColor:"green",
         accumulativeTime:0,
     }
-    changeStopLightColor(state.color);
+    changeStopLightColor(state.currentColor);
 }
 
 //accumulate time to use as a timer
 state.accumulativeTime+=deltaTime;
 
 //every 1 seconds cycle through colors
-if(state.accumulativeTime>1000){
+if(state.accumulativeTime>1000) {
     state.accumulativeTime %= 1000;
     
-    if(state.color=="green"){
-        state.color="red";
-    }
-    else if(state.color=="red"){
-        state.color="yellow";
-    }
-    else if(state.color=="yellow"){
-        state.color="green";
+    if(state.currentColor=="green"){
+        state.currentColor="red";
+    } else if(state.currentColor=="red"){
+        state.currentColor="yellow";
+    } else if(state.currentColor=="yellow"){
+        state.currentColor="green";
     }
     
-    changeStopLightColor(state.color);
+    changeStopLightColor(state.currentColor);
 }
 ```
