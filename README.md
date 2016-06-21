@@ -17,7 +17,7 @@ An inventory3D object is a scripted 3D object you can safely add to your aframe 
  <a-entity inventory-3d="https://www.inventory3d.com/cat.json"/>
 ```
 
-By simply adding this file, you bring a 3d object into your scene, with complex materials, and scripted behavior which can modify the inventory 3D object.
+By simply adding this file, you bring a 3d object into your scene, with complex materials, and scripted behavior which can modify the inventory 3D object in a safe manner.
 
 #a simple object: StopLight
 
