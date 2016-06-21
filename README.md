@@ -1,6 +1,6 @@
 # aframe-inventory3d
 
-![description](http://i.imgur.com/afQRkAR.jpg)
+![description](http://i.imgur.com/lwLKxL0.jpg)
 
 # install
 
