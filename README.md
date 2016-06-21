@@ -4,13 +4,13 @@ This project is to give all people an inventory of scripted 3D objects they can 
 
 ![description](http://i.imgur.com/1kkp8i0.jpg)
 
-# install
+# Install
 
 ```bash
 npm install aframe-inventory3d
 ```
 
-#what is an inventory3D object?
+#What is an Inventory3D object?
 An inventory3D object is a scripted 3D object you can safely add to your aframe scene. The object is inserted into your scene by a simple reference to create the 3d entity:
 
 ```html
@@ -19,7 +19,7 @@ An inventory3D object is a scripted 3D object you can safely add to your aframe 
 
 By simply adding this file, you bring a 3d object into your scene, with complex materials, and scripted behavior which can modify the inventory 3D object in a safe manner.
 
-#a simple object: StopLight
+#Example: StopLight
 
 We will create a simple object definition for a stop light. This file will include an information file (stoplight.json) and a collada model file (stoplight.dae). By defining various materials in our collada 3D object these materials can be referenced by our information file for various effects.
 
@@ -29,7 +29,7 @@ We will create a simple object definition for a stop light. This file will inclu
 }
 ```
 
-#scripting
+#Scripting
 
 To script for inventory3D objects you will be writing a javascript file that represents your code that will be run every frame. Note: your script will have to be efficient enough to avoid being turned off for taking too long. Other circumstances such as too many requests, memory exceptions, etc. may also deactivate your script, so program mindfully.
 
