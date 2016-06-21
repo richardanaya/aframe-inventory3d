@@ -9,6 +9,15 @@ npm install aframe-inventory3d
 ```
 
 #what is an inventory3D object?
+An inventory3D object is a scripted 3D object you can safely add to your aframe scene. The object is inserted into your scene by a simple reference to create the 3d entity:
+
+```html
+ <a-entity inventory-3d="https://www.inventory3d.com/cat.json"/>
+```
+
+By simply adding this file, you bring a 3d object into your scene, with complex materials, and scripted behavior which can modify the inventory 3D object.
+
+The aim of this project is to give all people an inventory of 3D objects they can bring into their worlds from anywhere.
 
 #a simple object: StopLight
 
