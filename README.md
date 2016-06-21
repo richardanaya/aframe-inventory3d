@@ -1,5 +1,7 @@
 # aframe-inventory3d
 
+This project is to give all people an inventory of scripted 3D objects they can safely bring into their worlds from anywhere that is CORS accessable.
+
 ![description](http://i.imgur.com/1kkp8i0.jpg)
 
 # install
@@ -16,8 +18,6 @@ An inventory3D object is a scripted 3D object you can safely add to your aframe 
 ```
 
 By simply adding this file, you bring a 3d object into your scene, with complex materials, and scripted behavior which can modify the inventory 3D object.
-
-The aim of this project is to give all people an inventory of 3D objects they can bring into their worlds from anywhere.
 
 #a simple object: StopLight
 
