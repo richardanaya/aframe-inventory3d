@@ -25,7 +25,37 @@ We will create a simple object definition for a stop light. This file will inclu
 
 ```json
 {
-
+  "scenes": [
+    {
+      "url":"./stoplight.dae",
+      "configuration":{
+        "objects":[
+          {
+            "id":"StopLight",
+            "materials": [
+              {
+                "id":"Material-StopLight-Body",
+                "type":"color",
+                "color":"gray"
+              },{
+                "id":"Material-StopLight-RedLight",
+                "type":"color",
+                "color":"red"
+              },{
+                "id":"Material-StopLight-YellowLight",
+                "type":"color",
+                "color":"yellow"
+              },{
+                "id":"Material-StopLight-GreenLight",
+                "type":"color",
+                "color":"green"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }
 ```
 
