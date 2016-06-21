@@ -67,10 +67,52 @@ To script for inventory3D objects you will be writing a javascript file that rep
 
 Additionally, you will have a state available for your script to use, and a number of helper methods for managing that state or making requests to modify your inventory3D object (changing materials, resizing, moving, etc.)
 
-Let's continue with our stop light example and add a script that will make it change lights:
+Let's continue with our stop light example and add a script that will make it change lights. A script's sole duty is to takes in a state, and return a state. In order for your script to request changes to an inventory3d object, a reques must be placed on state.requests array. There's various helper functions to do this.  In addition there are helper variables for time.
+
+Let's first modify our stoplight information json file to reference the script:
 
 ```json
 {
+     "script": "stoplight.js"
+     ...
+}
+```
 
+Now let's write the script itself
+
+```javascript
+function changeStopLightColor(color){
+    vrChangeMaterialColor("StopLight","Material-StopLight-Green",(color=="green")?"green":"darkgreen")
+    vrChangeMaterialColor("StopLight","Material-StopLight-Yellow",(color=="yellow")?"yellow":"darkyellow")
+    vrChangeMaterialColor("StopLight","Material-StopLight-Red",(color=="red")?"red":"darkred")
+}
+
+//if we have no state, we must be starting up
+if(state==null){
+    state = {
+        color:"green",
+        accumulativeTime:0,
+    }
+    changeStopLightColor(state.color);
+}
+
+//accumulate time to use as a timer
+state.accumulativeTime+=deltaTime;
+
+//every 1 seconds cycle through colors
+if(state.accumulativeTime>1000){
+    state.accumulativeTime %= 1000;
+    
+    if(state.color=="green"){
+        state.color="red";
+    }
+    else if(state.color=="red"){
+        state.color="yellow";
+    }
+    else if(state.color=="yellow"){
+        state.color="green";
+    }
+    
+    changeStopLightColor(state.color);
 }
 ```
