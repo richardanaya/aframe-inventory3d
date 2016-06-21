@@ -59,6 +59,8 @@ We will create a simple object definition for a stop light. This file will inclu
 }
 ```
 
+These can all be created by hand, but it is easier to see what is possibly by trying out the editor at http://www.inventory3d.com
+
 #Scripting
 
 To script for inventory3D objects you will be writing a javascript file that represents your code that will be run every frame. Note: your script will have to be efficient enough to avoid being turned off for taking too long. Other circumstances such as too many requests, memory exceptions, etc. may also deactivate your script, so program mindfully.
