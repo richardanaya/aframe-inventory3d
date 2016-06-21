@@ -81,10 +81,10 @@ Let's first modify our stoplight information json file to reference the script:
 Now let's write the script itself
 
 ```javascript
-function changeStopLightColor(color){
-    vrChangeMaterialColor("StopLight","Material-StopLight-Green",(color=="green")?"green":"darkgreen")
-    vrChangeMaterialColor("StopLight","Material-StopLight-Yellow",(color=="yellow")?"yellow":"darkyellow")
-    vrChangeMaterialColor("StopLight","Material-StopLight-Red",(color=="red")?"red":"darkred")
+function changeStopLightColor(c){
+    vrChangeMaterialColor("StopLight","Material-StopLight-Green",(c=="green")?"green":"darkgreen")
+    vrChangeMaterialColor("StopLight","Material-StopLight-Yellow",(c=="yellow")?"yellow":"darkyellow")
+    vrChangeMaterialColor("StopLight","Material-StopLight-Red",(c=="red")?"red":"darkred")
 }
 
 //if we have no state, we must be starting up
@@ -114,3 +114,8 @@ if(state.accumulativeTime>1000) {
     changeStopLightColor(state.currentColor);
 }
 ```
+
+#How does scripting work?
+Scripts of inventory3D objects execute once per frame in a javascript virtual machine in your browser. They are isolated from the outside world except through a few means. A single state object that is passed into and out. And various helper variables and functions for modifying the inventory3d object's state.
+
+If the script takes too long to execute, or generates an exception of any kind, it is removed from the virtual machine and prevented from execution. Additionally, there may be other restrictions on requests which may harm experience due to rapid calling or really should require the users permission. 
