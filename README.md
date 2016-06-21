@@ -59,7 +59,7 @@ We will create a simple object definition for a stop light. This file will inclu
 }
 ```
 
-These can all be created by hand, but it is easier to see what is possibly by trying out the editor at http://www.inventory3d.com
+These can all be created by hand, but it is easier to see what is possible by trying out the editor at http://www.inventory3d.com
 
 #Scripting
 
